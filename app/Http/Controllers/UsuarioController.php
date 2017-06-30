@@ -49,6 +49,9 @@ class UsuarioController extends Controller
         $usuario->nombre = $request['nombre'];
         $usuario->ap_paterno = $request['ap_paterno'];
         $usuario->ap_materno = $request['ap_materno'];
+        $usuario->edad = $request['edad'];
+        $usuario->estado = $request['estado'];
+        $usuario->municipio = $request['municipio'];
         $usuario->telefono = $request['telefono'];
         $usuario->email = $request['email'];
         $usuario->password = sha1($request['password']);
@@ -147,6 +150,18 @@ class UsuarioController extends Controller
 
         if ($request['password']) {
             $usuario->password = sha1($request['password']);
+        }
+
+        if ($request['edad']) {
+            $usuario->edad = $request['edad'];
+        }
+
+        if ($request['estado']) {
+            $usuario->estado = $request['estado'];
+        }
+
+        if ($request['municipio']) {
+            $usuario->municipio = $request['municipio'];
         }
 
         try {
