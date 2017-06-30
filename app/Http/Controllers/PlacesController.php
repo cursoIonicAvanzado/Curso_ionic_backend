@@ -114,7 +114,7 @@ class PlacesController extends Controller
 
         if (!$place) {
             $jsonResponse = response()->json([
-                'error_message' => 'Usuario con id ' . $id . ' no existe'
+                'error_message' => 'Place con id ' . $id . ' no existe'
             ]);
 
             $jsonResponse->setStatusCode(400);
@@ -165,7 +165,7 @@ class PlacesController extends Controller
 
         if (!$place) {
             $jsonResponse = response()->json([
-                'error_message' => 'Usuario con id ' . $id . ' no existe'
+                'error_message' => 'Place con id ' . $id . ' no existe'
             ]);
 
             $jsonResponse->setStatusCode(400);

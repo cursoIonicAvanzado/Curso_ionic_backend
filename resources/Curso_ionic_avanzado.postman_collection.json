@@ -1,0 +1,271 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Curso_ionic_avanzado",
+		"_postman_id": "8fdd0d46-c626-f62d-c7de-b7c35f32260f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all places",
+			"request": {
+				"url": "localhost:8000/places",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get place by id",
+			"request": {
+				"url": "localhost:8000/places/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Insert place",
+			"request": {
+				"url": "localhost:8000/places",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Porfirio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "latitud",
+							"value": "22.6535975",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "longitud",
+							"value": "-102.9838565",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update place",
+			"request": {
+				"url": "localhost:8000/places/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Marco",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "latitud",
+							"value": "22.6535975",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "longitud",
+							"value": "-102.9838565",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete place",
+			"request": {
+				"url": "localhost:8000/places/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all usuarios",
+			"request": {
+				"url": "localhost:8000/usuario",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get usuario by id",
+			"request": {
+				"url": "localhost:8000/usuario/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Insert usuario",
+			"request": {
+				"url": "localhost:8000/usuario",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Porfirio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ap_paterno",
+							"value": "Díaz",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ap_materno",
+							"value": "Sánchez",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "4949428616",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "porfirioads@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "holamundo",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update usuario",
+			"request": {
+				"url": "localhost:8000/usuario/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Pedro",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ap_paterno",
+							"value": "Moralez",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ap_materno",
+							"value": "Salas",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "4949428615",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pedroms@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "holamundo",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete usuario",
+			"request": {
+				"url": "localhost:8000/usuario/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
