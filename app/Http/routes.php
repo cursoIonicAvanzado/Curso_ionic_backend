@@ -14,3 +14,5 @@
 Route::resource('usuario', 'UsuarioController');
 
 Route::resource('places', 'PlacesController');
+
+Route::post('login', 'UsuarioController@login');

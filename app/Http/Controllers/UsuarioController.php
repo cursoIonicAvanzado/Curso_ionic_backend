@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UsuarioController extends Controller
 {
@@ -217,6 +218,33 @@ class UsuarioController extends Controller
             ]);
 
             $jsonResponse->setStatusCode(400);
+        }
+
+        return $jsonResponse;
+    }
+
+    public function login(Request $request)
+    {
+        $email = $request['email'];
+        $password = $request['password'];
+
+        if (!$email || !$password) {
+            $jsonResponse = response()->json([
+                'error_message' => 'Parámetros incompletos [email, password]'
+            ]);
+
+            $jsonResponse->setStatusCode(400);
+        } else {
+            $usuario = DB::table('usuario')
+                ->where('email', '=', $email)
+                ->where('password', '=', sha1($password))
+                ->first();
+
+            $jsonResponse = response()->json([
+                'ok' => $usuario != null
+            ]);
+
+            $jsonResponse->setStatusCode(200);
         }
 
         return $jsonResponse;
