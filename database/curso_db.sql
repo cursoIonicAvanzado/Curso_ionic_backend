@@ -36,7 +36,7 @@ CREATE TABLE `places` (
   `latitud` double NOT NULL,
   `longitud` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +45,16 @@ CREATE TABLE `places` (
 
 LOCK TABLES `places` WRITE;
 /*!40000 ALTER TABLE `places` DISABLE KEYS */;
+INSERT INTO `places` VALUES (13,'COZCyT',0,0);
+INSERT INTO `places` VALUES (14,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (15,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (16,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (17,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (18,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (19,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (20,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (21,'LABSOL',22.00002,22.00002);
+INSERT INTO `places` VALUES (22,'LABSOL',22.00002,22.00002);
 /*!40000 ALTER TABLE `places` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,12 +72,13 @@ CREATE TABLE `usuario` (
   `ap_materno` varchar(50) NOT NULL,
   `edad` int(11) NOT NULL,
   `telefono` varchar(15) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
   `password` char(40) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `municipio` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `usuario_email_uindex` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,8 +87,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (4,'Pedro','Moralez','Salas',21,'4949428615','pedroms@gmail.com','e516f979536994a14d9b0500bca3a1287b9ea9fe','Aguascalientes','Aguascalientes');
-INSERT INTO `usuario` VALUES (5,'Porfirio','Díaz','Sánchez',20,'4949428616','porfirioads@gmail.com','e516f979536994a14d9b0500bca3a1287b9ea9fe','Zacatecas','Jerez');
+INSERT INTO `usuario` VALUES (20,'Porfirio','Díaz','Sánchez',20,'4949428616','porfirioads@gmail.com','e516f979536994a14d9b0500bca3a1287b9ea9fe','Zacatecas','Jerez');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -90,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-30 11:47:13
+-- Dump completed on 2017-07-02 11:55:03

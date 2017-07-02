@@ -46,7 +46,7 @@
 					"urlencoded": [
 						{
 							"key": "nombre",
-							"value": "Porfirio",
+							"value": "Jardín Principal",
 							"description": "",
 							"type": "text"
 						},
@@ -192,6 +192,24 @@
 							"value": "holamundo",
 							"description": "",
 							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "20",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Zacatecas",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "municipio",
+							"value": "Jerez",
+							"description": "",
+							"type": "text"
 						}
 					]
 				},
@@ -202,7 +220,7 @@
 		{
 			"name": "Update usuario",
 			"request": {
-				"url": "localhost:8000/usuario/1",
+				"url": "localhost:8000/usuario/4",
 				"method": "PUT",
 				"header": [
 					{
@@ -249,6 +267,24 @@
 							"value": "holamundo",
 							"description": "",
 							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "21",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Aguascalientes",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "municipio",
+							"value": "Aguascalientes",
+							"description": "",
+							"type": "text"
 						}
 					]
 				},
@@ -263,6 +299,39 @@
 				"method": "DELETE",
 				"header": [],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "localhost:8000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "porfirioads@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "holamundo",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []
